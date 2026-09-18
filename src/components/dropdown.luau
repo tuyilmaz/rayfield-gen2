@@ -1420,6 +1420,10 @@ function Dropdown:Set(value, skipCallback)
     end
 end
 
+function Dropdown:IsOpen()
+    return self._isOpen
+end
+
 function Dropdown:_setShown(shown, animate)
     -- Custom reveal: main is a transparent wrapper, so reveal the header card (self.top)
     -- rather than main. The options card fades in on open, not here.
